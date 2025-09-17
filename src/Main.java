@@ -30,7 +30,7 @@ public class Main {
 
 
             person1.guessAge(InputHandler.getInt(0,99));
-
+            InputHandler.getString();
 
 
         }
