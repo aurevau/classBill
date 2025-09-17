@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -8,10 +7,14 @@ import java.util.Scanner;
 public class Main {
 
     public static ArrayList<Person> people = new ArrayList<>();
-    public static Scanner input = new Scanner(System.in);
+
 
     public static void main(String[] args) {
         initList();
+
+//        System.out.println("Skriv vad du vill");
+//        String s = InputHandler.getString();
+//        System.out.println(s);
 
 
         while(true) {
@@ -24,12 +27,11 @@ public class Main {
             person2.greetOtherPerson(person1);
 
             System.out.println("Guess my age");
-            person1.guessAge(input.nextInt());
-            input.nextLine(); // Rensar scannern efter int input
 
 
-            // Denna för att kunna trycka enter för att få en ny person
-            input.nextLine();
+            person1.guessAge(InputHandler.getInt(0,99));
+
+
 
         }
 
@@ -58,15 +60,15 @@ public class Main {
         System.out.println();
 
         System.out.println("Please enter a firstname");
-        person.setFirstName(input.nextLine());
+        person.setFirstName(InputHandler.getString());
 
 
         System.out.println("Please enter a lastname");
-        person.setLastName(input.nextLine());
+        person.setLastName(InputHandler.getString());
 
         System.out.println("Please enter your age");
-        person.setAge(input.nextInt());
-        input.nextLine();
+        person.setAge(InputHandler.getInt());
+        InputHandler.getString();
 
         System.out.println("Please enter your job");
 

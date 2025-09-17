@@ -19,7 +19,7 @@ public class Person {
 
     public void greetOtherPerson(Person other){
         System.out.println("Hello " + other.firstName +
-                " my name is " + this.firstName);
+                ", my name is " + this.firstName);
     }
     public void stateAge(){
         System.out.println("I am " + this.age + " years old");
