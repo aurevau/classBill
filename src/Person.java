@@ -17,6 +17,27 @@ public class Person {
         System.out.println("Hello, my name is " + this.firstName);
     }
 
+    public void greetOtherPerson(Person other){
+        System.out.println("Hello " + other.firstName +
+                " my name is " + this.firstName);
+    }
+    public void stateAge(){
+        System.out.println("I am " + this.age + " years old");
+    }
+    public void guessAge(int guess){
+
+        if(guess == this.age){
+            System.out.println("Yeah, you guessed it!!");
+            this.stateAge();
+        } else if (guess > this.age){
+            System.out.println("I'm not that old...:(");
+            this.stateAge();
+        } else {
+            System.out.println("No, do I look that young?:) ");
+            this.stateAge();
+        }
+    }
+
     public void setFirstName(String name){
         this.firstName = name;
     }

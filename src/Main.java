@@ -17,11 +17,20 @@ public class Main {
         while(true) {
 //            addPerson();
             //printPeopleList();
-            Person person = getRandomPerson();
-            person.greet();
+            Person person1 = getRandomPerson();
+            Person person2 = getRandomPerson();
+
+            person1.greet();
+            person2.greetOtherPerson(person1);
+
+            System.out.println("Guess my age");
+            person1.guessAge(input.nextInt());
+            input.nextLine(); // Rensar scannern efter int input
+
 
             // Denna för att kunna trycka enter för att få en ny person
             input.nextLine();
+
         }
 
 
